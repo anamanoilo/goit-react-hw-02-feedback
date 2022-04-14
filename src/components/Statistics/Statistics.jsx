@@ -14,6 +14,8 @@ const Statistics = ({ statistics }) => {
 };
 
 Statistics.propTypes = {
-  statistics: PropTypes.arrayOf(PropTypes.array),
+  statistics: PropTypes.arrayOf(
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))
+  ).isRequired,
 };
 export default Statistics;
